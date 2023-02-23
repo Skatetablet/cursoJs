@@ -1,12 +1,15 @@
 class Cliente {
+
+    #nombre;
+
     constructor(nombre, saldo) {
-        this.nombre = nombre;
+        this.#nombre = nombre;
         this.saldo = saldo;
     }
 
     mostrarInfo() {
 
-        return `Cliente: ${this.nombre} y tiene un saldo de ${this.saldo}`;
+        return `Cliente: ${this.#nombre} y tiene un saldo de ${this.saldo}`;
     }
 
     static bienvenida() {
@@ -15,3 +18,6 @@ class Cliente {
 
 }
 
+const juan = new Cliente("Juan", 200);
+console.log(juan.mostrarInfo());
+console.log(juan.nombre)
